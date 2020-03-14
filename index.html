@@ -9,14 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <header class="header header--index">
+    <header class="header">
       <div class="header__logo logo">
-        <a class="logo__link" href="#">
-          <img class="logo__image" src="img/logo-image.svg" width="20" height="14" alt="Photoguide Logo">
-        </a>
-        <a class="logo__link" href="#">
-          <img class="logo__image" src="img/logo-text.svg" width="70" height="13" alt="Photoguide Logo Name">
-        </a>
+        <div class="logo__container">
+          <a class="logo__link logo__link--image" href="#">
+            <img class="logo__image" src="img/logo-image.svg" width="40" height="27" alt="Photoguide Logo">
+          </a>
+          <a class="logo__link logo__link--text" href="#">
+            <img class="logo__text" src="img/logo-text.svg" width="140" height="26" alt="Photoguide Logo Name">
+          </a>
+        </div>
         <p class="logo__slogan">Stop the time - leave the memories</p>
       </div>
 
@@ -24,7 +26,7 @@
         <span class="visually-hidden">Open menu</span>
       </button>
 
-      <nav class="main-nav  main-nav--closed">
+      <nav class="main-nav main-nav--closed">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">Цены и услуги</a>
@@ -43,50 +45,83 @@
     </header>
 
     <main class="main">
-      <div class="main__intro intro">
-        <h1 class="title">Фотосессия в Турции</h1>
-        <p class="intro__text">по цене 7000 рублей за 100 фотографий и 10 одноминутных видео для <i>Instagram</i><span class="intro__insta-link"></span></p>
-        <a class="intro__button">Связаться с фотографом</a>
-      </div>
-      <div class="main__features features">
-        <h2 class="main__title main__title--features">Вы получаете</h2>
-        <p class="features__remark"><sup>*</sup>Турция</p>
-        <ul class="features__list">
-          <li class="features__item">
-            100 обработанных фото и оригиналы
-          </li>
-          <li class="features__item">
-            Первые 10 фото и 1 видео в течение 24 часов
-          </li>
-          <li class="features__item">
-            Все фотографии через 15 дней
-          </li>
-        </ul>
-      </div>
-      <div class="main__gallery gallery">
+      <section class="main__intro intro">
+        <div class="intro__container">
+          <h1 class="title">Фотосессия в Турции</h1>
+          <p class="intro__text">по цене 7000 рублей за 100 фотографий и 10 одноминутных видео для <a class="intro__insta-link" href="#">Instagram </a></p>
+          <button type="button" class="intro__button">Связаться с фотографом</button>
+        </div>
+        <div class="main__features features">
+          <h2 class="main__title main__title--features">Вы получаете</h2>
+          <p class="features__remark"><sup>*</sup>Турция</p>
+          <ul class="features__list">
+            <li class="features__item features__item--first-photoes">
+              100 обработанных фото и оригиналы
+            </li>
+            <li class="features__item features__item--first-day">
+              Первые 10 фото и 1 видео в течение 24 часов
+            </li>
+            <li class="features__item features__item--all-photoes">
+              Все фотографии через 15 дней
+            </li>
+          </ul>
+        </div>
+  
+      </section>
+      <section class="main__gallery gallery">
         <h2 class="main__title main__title--gallery">Галерея</h2>
         <p class="main__description main__description--gallery">Мы работаем во всех стилях</p>
         <form class="gallery__filters-form filters-form">
-          <label class="filters-form__label">Семейная съемка
-            <input class="filters-form__label" type="radio" name="photo">
-          </label>
-          <label class="filters-form__label">Love story
-            <input class="filters-form__label" type="radio" name="photo">
-          </label>
-          <label class="filters-form__label">Lifestyle
-            <input class="filters-form__label" type="radio" name="photo">
-          </label>
-          <label class="filters-form__label">Fashion
-            <input class="filters-form__label" type="radio" name="photo">
-          </label>
-          <label class="filters-form__label">Glamour
-            <input class="filters-form__label" type="radio" name="photo">
-          </label>
+          <ul class="filters-form__list">
+            <li class="filters-form__item">
+              <label class="filters-form__label" for="family">Семейная съемка</label>
+              <input class="filters-form__input" type="radio" name="photo" id="family">
+            </li>
+            <li class="filters-form__item">
+              <label class="filters-form__label" for="love">Love story</label>
+              <input class="filters-form__input" type="radio" name="photo" id="love">
+            </li>
+            <li class="filters-form__item">
+              <label class="filters-form__label" for="lifestyle">Lifestyle</label>
+              <input class="filters-form__input" type="radio" name="photo" id="lifestyle">
+            </li>
+            <li class="filters-form__item">
+              <label class="filters-form__label" for="fashion">Fashion</label>
+              <input class="filters-form__input" type="radio" name="photo" id="fashion" checked>
+            </li>
+            <li class="filters-form__item">
+              <label class="filters-form__label" for="glamour">Glamour</label>
+              <input class="filters-form__input" type="radio" name="photo" id="glamour">
+            </li>
+          </ul>
         </form>
-        <div class="gallery__content">
+        <div class="gallery__content photo-content">
+          <ul class="photo-content__list">
+            <li class="photo-content__item">
+              <img class="photo-content__image" src="img/image-1.png" width="40px" alt="Photo">
+            </li>
+            <li class="photo-content__item">
+              <img class="photo-content__image" src="img/image-2.png" width="40px" alt="Photo">
+            </li>
+            <li class="photo-content__item">
+              <img class="photo-content__image" src="img/image-3.png" width="40px" alt="Photo">
+            </li>
+            <li class="photo-content__item">
+              <img class="photo-content__image" src="img/image-4.png" width="40px" alt="Photo">
+            </li>
+            <li class="photo-content__item">
+              <img class="photo-content__image" src="img/image-5.png" width="40px" alt="Photo">
+            </li>
+            <li class="photo-content__item">
+              <img class="photo-content__image" src="img/image-6.png" width="40px" alt="Photo">
+            </li>
+            <li class="photo-content__item">
+              <img class="photo-content__image" src="img/image-7.png" width="40px" alt="Photo">
+            </li>
+          </ul>
         </div>
-      </div>
-      <div class="main__pricelist pricelist">
+      </section>
+      <section class="main__pricelist pricelist">
         <h2 class="main__title main__title--pricelist">услуги и цены</h2>
         <p class="main__description main__description--pricelist">Сколько стоят наши услуги</p>
         <ul class="pricelist__tariff-list tariff">
@@ -171,5 +206,10 @@
               <button class="tariff__order">Заказать</button>
             </div>
           </li>
-      </div>
+        </ul>
+      </section>
     </main>
+    <script src="js/script.js"></script>
+  </body>
+
+</html>
