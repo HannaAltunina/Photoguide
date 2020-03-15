@@ -16,12 +16,13 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../../img/background-image.png");
+  background: url("../../img/noize.svg");
   background-size: 100% 100%;
   background-position: top center;
   background-repeat: no-repeat;
-  filter: blur(10px);
 }
+
+
 
 .header__logo {
   display: flex;
